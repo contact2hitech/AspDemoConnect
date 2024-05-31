@@ -1,0 +1,87 @@
+﻿<%@ Master Language="VB" CodeFile="Master2013.master.vb" Inherits="Master2013" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>SAMPLE STYLE Page</title>
+    <style type="text/css">
+        .style2
+        {
+            height: 61px;
+            }
+        .style3
+        {
+        }
+        .style6
+        {
+            width: 132px;
+            height: 324px;
+        }
+        .style7
+        {
+            width: 639px;
+            height: 324px;
+        }
+        .style8
+        {
+            height: 324px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="border: thin dotted #00FFFF; width:100%; height:500px; background-color:#FFFFCC; font-family: Verdana; font-size: x-large; font-weight: bold;">
+        <table style="width:100%; height:100%" >
+                <tr style="background-color:#FFCCFF">
+                    <td class="style2" colspan="3">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/image/003.jpg" />
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/image/004.jpg" />
+                        <asp:Image ID="Image3" runat="server" ImageUrl="~/image/009.jpg" />
+                        <br />
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                        </asp:SiteMapPath>
+                    </td>
+                    
+                </tr>
+                <tr style="background-color: #99FFCC">
+                    <td class="style6">
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                        </asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    </td>
+                    <td class="style7">
+                        <br />
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <p>
+                                hitesh p patel<asp:Button ID="Button1" runat="server" Text="Button" />
+                            </p>
+                        </asp:ContentPlaceHolder>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </td>
+                    <td class="style8">
+                    </td>
+                    
+                </tr>
+                <tr style="background-color: #99FF99">
+                    <td class="style3" colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    
+                </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

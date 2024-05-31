@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  
+  <Ad>
+    <ImageUrl>image/001.jpg</ImageUrl>
+    <NavigateUrl>www.google.com</NavigateUrl>
+    <AlternateText>HELLO ALL</AlternateText>
+    <Keyword>General</Keyword>
+    <Impressions>1</Impressions>
+    
+  </Ad>
+  <Ad>
+    <ImageUrl>image/002.jpg</ImageUrl>
+    <NavigateUrl>StructureSample.aspx</NavigateUrl>
+    <AlternateText>HELLO ALL IMG 2</AlternateText>
+    <Keyword>General</Keyword>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    
+    <ImageUrl>image/003.jpg</ImageUrl>
+    <NavigateUrl>StructureSample.aspx</NavigateUrl>
+    <AlternateText>HELLO ALL IMG 3</AlternateText>
+    <Keyword>Blocked</Keyword>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    
+    <ImageUrl>image/004.jpg</ImageUrl>
+    <NavigateUrl>StructureSample.aspx</NavigateUrl>
+    <AlternateText>HELLO ALL IMG 4</AlternateText>
+    <Keyword>General</Keyword>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    
+    <ImageUrl>image/005.jpg</ImageUrl>
+    <NavigateUrl>StructureSample.aspx</NavigateUrl>
+    <AlternateText>HELLO ALL IMG 5</AlternateText>
+    <Keyword>General</Keyword>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    
+    <ImageUrl>image/006.jpg</ImageUrl>
+    <NavigateUrl>StructureSample.aspx</NavigateUrl>
+    <AlternateText>HELLO ALL IMG 6</AlternateText>
+    <Keyword>General</Keyword>
+    <Impressions>1</Impressions>
+  </Ad>
+</Advertisements>

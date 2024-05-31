@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="ROOT PAGE"  description="MY DEMOS HOME PAGE">
+      <siteMapNode url="Welcome.aspx" description="Welcome" title="Welcome">
+        <siteMapNode url="LoginDemo.aspx" description="LoginDemo " title="LoginDemo" >
+          </siteMapNode>
+        <siteMapNode url="googlesearch.aspx" description="MY SEARCH PAGE" title="MY SEARCH PAGE" >
+          <siteMapNode url="RuntimeUserControlDemo.aspx" description="MY NEW CHILD" title="RUMTIME USER CONTROL"/>
+            
+          </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="test.aspx" description="test" title="testing">
+      </siteMapNode>
+      <siteMapNode url="TemplateDownload.aspx" description="TemplateDownload.aspx" title="TemplateDownload.aspx" >
+        </siteMapNode>
+      <siteMapNode url="Submission.aspx" description="Submission.aspx" title="Submission.aspx" >
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

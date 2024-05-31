@@ -1,0 +1,41 @@
+﻿.mybg
+{
+	background-color: #dddddd;
+}
+.invertbg
+{
+	background-color: #222222;
+}
+.myowntxt
+{
+	background-color: #FFFFFF;
+	font-family: 'Verdana';
+	font-size: small;
+	color: Blue;
+	font-weight: bold;
+	height:20px;
+	width:213px;
+}
+
+.mylabel
+{
+	border: thin double #6666FF;
+}
+
+
+
+h5
+{
+	background-color:Green
+}
+
+
+h5.bold
+{
+	border-style: dotted;
+	padding: inherit;
+	font-family: Monotype Corsiva;
+	background-color: #00FF00;
+	text-align: right;
+}
+

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="requestOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="useremail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="requestOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestOTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="maskEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="maskEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maskEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatedata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="useremail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newpass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatedataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updatedataResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="requestOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:requestOTP" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:requestOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:maskEmail" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:maskEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatedataSoapIn">
+    <wsdl:part name="parameters" element="tns:updatedata" />
+  </wsdl:message>
+  <wsdl:message name="updatedataSoapOut">
+    <wsdl:part name="parameters" element="tns:updatedataResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpGetIn">
+    <wsdl:part name="useremail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailHttpGetIn">
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="updatedataHttpGetIn">
+    <wsdl:part name="useremail" type="s:string" />
+    <wsdl:part name="newpass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updatedataHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpPostIn">
+    <wsdl:part name="useremail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailHttpPostIn">
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="maskEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="updatedataHttpPostIn">
+    <wsdl:part name="useremail" type="s:string" />
+    <wsdl:part name="newpass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updatedataHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="requestOTP">
+      <wsdl:input message="tns:requestOTPSoapIn" />
+      <wsdl:output message="tns:requestOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <wsdl:input message="tns:maskEmailSoapIn" />
+      <wsdl:output message="tns:maskEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <wsdl:input message="tns:updatedataSoapIn" />
+      <wsdl:output message="tns:updatedataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="requestOTP">
+      <wsdl:input message="tns:requestOTPHttpGetIn" />
+      <wsdl:output message="tns:requestOTPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <wsdl:input message="tns:maskEmailHttpGetIn" />
+      <wsdl:output message="tns:maskEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <wsdl:input message="tns:updatedataHttpGetIn" />
+      <wsdl:output message="tns:updatedataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="requestOTP">
+      <wsdl:input message="tns:requestOTPHttpPostIn" />
+      <wsdl:output message="tns:requestOTPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <wsdl:input message="tns:maskEmailHttpPostIn" />
+      <wsdl:output message="tns:maskEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <wsdl:input message="tns:updatedataHttpPostIn" />
+      <wsdl:output message="tns:updatedataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestOTP">
+      <soap:operation soapAction="http://tempuri.org/requestOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <soap:operation soapAction="http://tempuri.org/maskEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <soap:operation soapAction="http://tempuri.org/updatedata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestOTP">
+      <soap12:operation soapAction="http://tempuri.org/requestOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <soap12:operation soapAction="http://tempuri.org/maskEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <soap12:operation soapAction="http://tempuri.org/updatedata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="requestOTP">
+      <http:operation location="/requestOTP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <http:operation location="/maskEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <http:operation location="/updatedata" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="requestOTP">
+      <http:operation location="/requestOTP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="maskEmail">
+      <http:operation location="/maskEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <http:operation location="/updatedata" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.10.73/OTPDemo/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.10.73/OTPDemo/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://192.168.10.73/OTPDemo/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://192.168.10.73/OTPDemo/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

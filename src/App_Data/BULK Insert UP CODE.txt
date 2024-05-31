@@ -1,0 +1,43 @@
+Imports Microsoft.VisualBasic
+Imports System.Data.SqlClient
+Imports System.Data
+
+    Dim cn As New SqlConnection
+    Dim cmd As New SqlCommand
+    Dim da1 As New SqlDataAdapter
+    Dim ds As New DataSet
+
+        cn = New SqlConnection(System.Web.Configuration.WebConfigurationManager.ConnectionStrings.Item("constrsql").ConnectionString)
+
+ Dim insertquery As String
+        insertquery = "insert into reg_details values (" & no & ",0,'" & txtName.Text & "','" & txtEmail.Text & "','" & txtMob.Text & "','" & LCase(txtCity1.Text) & "','" & txtEmail.Text & "','" & txtUpass.Text & "','001.jpg')"
+msgbox(insertquery)       
+ cmd = New SqlCommand(insertquery , cn)
+        Dim no As Integer
+        cn.Open()
+        no = cmd.ExecuteNonQuery()
+        cn.Close()
+ If no > 0 Then
+            lblStatus.Text = "Registration Successfull"
+        Else
+            lblStatus.Text = "Registration Incomplete"
+        End If
+
+
+22/08/14
+3,45,19,22,36,1,15,55,6
+
+
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(155 AS Numeric(3, 0)), CAST(12 AS Numeric(3, 0)), N'vishal', N'bhattivishal88@gmail.com', N'9033717790', N'surat', N'bhatti', N'9898467709', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(156 AS Numeric(3, 0)), NULL, N'kathiriya hemali j', N'hemz11@gmail.com', N'9825445278', N'surat', N'tybca95', N'hemu123', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(157 AS Numeric(3, 0)), NULL, N'kathiriya hemali j', N'hemz11@gmail.com', N'9825445278', N'surat', N'tybca95', N'hemu123', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(158 AS Numeric(3, 0)), NULL, N'dcv', N'mital@gmail.com', N'9900819182', N'surat', N'mital', N'9999999999', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(159 AS Numeric(3, 0)), NULL, N'mayani jatin', N'mayanijatin95@gmail.com', N'9824390892', N'surat', N'shiv', N'jannat', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(160 AS Numeric(3, 0)), NULL, N'kakadiya milan', N'milankakadiya29@gmail.com', N'7405447776', N'surat', N'mpkakadiya', N'kakadiya', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(161 AS Numeric(3, 0)), NULL, N'mayani jatin', N'mayanijatin95@gmail.com', N'9824390892', N'surat', N'jannat', N'jannat', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(162 AS Numeric(3, 0)), CAST(23 AS Numeric(3, 0)), N'surabhi', N'surabhi377@gmail.com', N'8866105724', N'surat', N'surabhi', N'surabhi', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(163 AS Numeric(3, 0)), NULL, N'vaibhavi', N'lakhanivaibhavi108@gmail.com', N'8866689950', N'surat', N'vaibhavi', N'8866689950', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(164 AS Numeric(3, 0)), CAST(46 AS Numeric(3, 0)), N'ANKITA', N'dudhatankita51@gmail.com', N'9727343055', N'surat', N'ankita', N'anki123', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(165 AS Numeric(3, 0)), CAST(63 AS Numeric(3, 0)), N'brijesh', N'hadiyalbrijesh@live.com', N'8866363267', N'surat', N'hadiyalbrijesh@live.com', N'1234', N'001.JPG')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(166 AS Numeric(3, 0)), CAST(0 AS Numeric(3, 0)), N'hfh', N'rthfth@gmail.com', N'9076443245', N'surat', N'rthfth@gmail.com', N'123', N'001.jpg')
+INSERT [dbo].[reg_details] ([uid], [student_id], [name], [emailid], [mobile], [city], [uname], [upassword], [simage]) VALUES (CAST(167 AS Numeric(3, 0)), CAST(0 AS Numeric(3, 0)), N'lavish', N'lavish@gmail.com', N'8000464648', N'surat', N'lavish@gmail.com', N'12345', N'001.jpg')

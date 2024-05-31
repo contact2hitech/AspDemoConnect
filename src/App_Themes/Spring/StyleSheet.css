@@ -1,0 +1,30 @@
+﻿
+h1
+{
+	background-color: #00FFFF;
+}
+h2
+{
+	background-color: #FF00FF;
+}
+
+h3
+{
+	background-color: #008080;
+}
+
+h4
+{
+	background-color: #FFFF00;
+}
+
+.myheder
+{
+}
+#Button5
+{
+	background-color: #00FFFF;
+	font-family: 'Monotype Corsiva';
+	font-size: larger;
+	font-weight: bold;
+}

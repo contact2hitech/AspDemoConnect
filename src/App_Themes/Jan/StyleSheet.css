@@ -1,0 +1,20 @@
+﻿body 
+{
+    background-color: #b7def6;
+    background-image: url(Images/BlueBg.jpg);
+    background-repeat: repeat-x;
+}
+
+TABLE
+{
+    color: white;
+    background-color: navy;
+}
+.siteLogo
+{
+    font-size: larger;
+    color: yellow;
+    border-bottom: maroon thin solid;
+    font-family: 'Times New Roman';
+    background-color: teal;
+}

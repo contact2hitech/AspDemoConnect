@@ -1,0 +1,42 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMaster.master" AutoEventWireup="false" CodeFile="AdminMenu.master.vb" Inherits="AdminMenu" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" runat="server" 
+    contentplaceholderid="ContentPlaceHolder1">
+        
+            <h2>Welcome to my Website. This website contains Examples for ASP.Net. You can 
+                find all the Demos for different controls and functionality of ASP.Net</h2>
+            
+            <p> <a href="#/page/1" target="_parent">Free CSS Templates</a> are provided by <a href="#" target="_parent">ASP.NET SAMPLES</a> 
+                for everyone. Feel free to download, edit used in this template. Nam ut libero at lacus feugiat tincidunt vitae sed ipsum.<asp:Button 
+                    ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="Button2" runat="server" Text="Button" />
+                     </p>
+            
+          <div class="cleaner_h20"></div>
+            
+            <div class="image_fl">
+	            <img src="images/templatemo_images01.jpg" alt="image" />
+            </div>
+            
+            <div class="section_w250 float_r">
+            
+            	<ul class="list_01">
+                   	  <li>For info </li>
+                      <li>For more Info</li>
+              </ul>
+            
+            </div>
+        
+        
+
+
+
+</asp:Content>
+
+
+
+

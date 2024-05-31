@@ -1,0 +1,20 @@
+﻿body
+{
+    background-color: #f5f4d3;
+    background-image: url(Images/OrangeBg.jpg);
+    background-repeat: repeat-x;
+}
+
+TABLE
+{
+    color: #0000ff;
+    background-color: #cc9966;
+}
+.siteLogo
+{
+    font-size: larger;
+    color: black;
+    border-bottom: maroon thin solid;
+    font-family: 'Times New Roman';
+    background-color: #cc99ff;
+}

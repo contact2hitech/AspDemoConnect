@@ -1,0 +1,4 @@
+db_9ab1ff_sample
+sample2013
+
+"Data Source=SQL5005.Smarterasp.net;Initial Catalog=DB_9AB1FF_sample;User Id=DB_9AB1FF_sample_admin;Password=YOUR_DB_PASSWORD;"

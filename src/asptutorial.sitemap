@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode description="SAMPLE NAVIGATION DEMO " url="LoginDemo.aspx" title="NAVIGATION EXAMPLE"  >
+    <siteMapNode url="University.aspx" title="UNIVERSITY PAGE"  description="UNIVERSITY PAGE">
+      <siteMapNode url="BCA.aspx" title="BCA" description="BCA COLLEGES ">
+        <siteMapNode url="SUTEXBCA.aspx" title="SUTEX BCA" description="SUTEX BCA COLLEGE " >
+          <siteMapNode url="FYBCA.aspx" title="TY BCA 2" description="SUTEX BCA COLLEGE TY BCA 2" >
+            <siteMapNode url="zContact.aspx" title="SAMPLE CHILD" description="SAMPLE DEMO PAGE" >
+              <siteMapNode url="OnlineUsers111.aspx" title="NESTED CHILD PAGE"  description="NESTED CHILD DEMO PAGE">
+                <siteMapNode url="Default.aspx" title="Ch 3 My First ASP.NET Page "  description="HTHis is chapter no 3">
+                  <siteMapNode url="PostBackDemo.aspx" title="Ex 3.1 Postback Demo"  description="Ex 3.1 Postback Demo" />
+                  <siteMapNode url="ReadAppSettings.aspx" title="Ex 3.2 App Settings Demo"  description="Ex 3.1 Postback Demo" />
+                </siteMapNode>
+              </siteMapNode>
+              <siteMapNode url="ListControlDemo.aspx" title="MY LIST CONTROL DEMO PAGE"  description="NESTED CHILD DEMO PAGE 2">
+              </siteMapNode>
+              <siteMapNode url="NavigationDemo.aspx" title="HELLO FROM NAVIGATION PAGE"  description="NESTED CHILD DEMO PAGE 2">
+                <siteMapNode url="123NavigationDemo.aspx" title="2017 PAGE"  description="NESTED CHILD DEMO PAGE 2">
+                </siteMapNode>
+              </siteMapNode>
+            </siteMapNode>
+          </siteMapNode>
+
+        </siteMapNode>
+        <siteMapNode url="SVPATELBCA.aspx" title="SVPATEL BCA" description="SVPATEL BCA COLLEGE " ></siteMapNode>
+
+      </siteMapNode>
+      <siteMapNode url="BBA.aspx" title="BBA" description="BBA COLLEGES " ></siteMapNode>
+      <siteMapNode url="BCOM.aspx" title="BCOM" description="BCOM COLLEGES " ></siteMapNode>
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

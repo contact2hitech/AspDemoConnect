@@ -1,0 +1,47 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+
+<asp:Button runat="server" Font-Bold="True" Font-Names="Times New Roman"  />
+<asp:Button runat="server" SkinId="WBtn1" BackColor="#FFCCFF" BorderStyle="Groove" Font-Bold="True" Font-Size="15pt" ForeColor="Red" />  
+<asp:Button runat="server" SkinId="WBtn2" BackColor="#99CCFF" Font-Bold="True" Font-Names="Monotype Corsiva" Font-Overline="True" Font-Size="12pt" ForeColor="#663300" />
+
+
+<asp:Calendar  runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" 
+                               CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
+                               ForeColor="#003399" Height="200px" Width="220px" >
+        <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+        <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+        <WeekendDayStyle BackColor="#CCCCFF" />
+        <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+        <OtherMonthDayStyle ForeColor="#999999" />
+        <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+        <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+        <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" 
+            Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                           </asp:Calendar>
+<asp:Calendar SkinId="mycal" runat="server" BackColor="#66FF66" BorderColor="Blue" 
+        BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
+        ForeColor="#003300" Height="200px" ShowGridLines="True" Width="220px">
+        <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+        <SelectorStyle BackColor="#FFCC66" />
+        <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+        <OtherMonthDayStyle ForeColor="#CC9966" />
+        <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+        <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+        <TitleStyle BackColor="#6600FF" Font-Bold="True" Font-Size="9pt" 
+            ForeColor="#99FF66" />
+    </asp:Calendar>

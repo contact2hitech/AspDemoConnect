@@ -1,0 +1,349 @@
+﻿<%@ Master Language="VB" CodeFile="MainMaster.master.vb" Inherits="MainMaster"   %>
+
+<%@ Register src="myfooter.ascx" tagname="myfooter" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>ASP.NET SAMPLES MASTER PAGE</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css"  />
+    <link href="mystyle.css" rel="stylesheet" type="text/css" />
+    
+     <link id="Link1" runat="server" rel="shortcut icon" href="images/icon_eav.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="images/icon_eav.ico" type="image/ico" />
+    <style type="text/css">
+        header { border-bottom: 0px solid #000; }
+header  h2 { display: inline-block; }
+header span { margin-left: 170px; }
+          .WordWrap {
+            width: 100%;
+            word-break: break-all;
+        }
+        #TextArea1
+        {
+            height: 103px;
+            width: 550px;
+        }
+        #TextArea2
+        {
+            height: 103px;
+            width: 550px;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery/jquery-ui.css" />
+  <script  src="jquery/jquery-1.10.2.js"></script>
+  <script  src="jquery/jquery-ui.js"></script>
+  
+  <%--dialog flow messenger
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="amroli-helpdesk"
+  agent-id="fee4f5aa-e686-48b3-9274-503ff4605422"
+  language-code="en-in"
+></df-messenger>--%>
+  <%--this is my comment--%>
+<%--  <select name="effects" id="effectTypes">
+  <option value="blind">Blind</option>
+  <option value="bounce">Bounce</option>
+  <option value="clip">Clip</option>
+  <option value="drop">Drop</option>
+  <option value="explode">Explode</option>
+  <option value="fade">Fade</option>
+  <option value="fold">Fold</option>
+  <option value="highlight">Highlight</option>
+  <option value="puff">Puff</option>
+  <option value="pulsate">Pulsate</option>
+  <option value="scale">Scale</option>
+  <option value="shake">Shake</option>
+  <option value="size">Size</option>
+  <option value="slide">Slide</option>
+  <option value="transfer">Transfer</option>
+</select>--%>
+  
+  <script type="text/jscript">
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: true,
+      show: {
+          effect: "blind",
+        duration: 1000
+      },
+      hide: { 
+          effect: "fold",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+        });
+//$('#btn-type').click(function(){
+//					$('#type-dialogBox').dialogBox({
+//						type: 'correct'  //three type:'normal'(default),'correct','error',
+//						width: 300,
+//						height: 200,
+//						hasMask: true,
+//						autoHide: true,
+//						time: 3000,
+//						effect: 'fall',
+//						title: 'Notice',
+//						content: 'Don't forget to Check Assignment...!!!!'
+//					});
+//				})
+  </script>
+</head>
+<body>
+   <form runat="server">
+   <!-- JAVASCRIPT POP UP MESSAGE -->
+  <%--<div id="dialog" title="Hi-Tech Demos">
+  <p>
+  <asp:Literal ID="ltlWelcome" runat="server" Text=" Guest Login Now">Dear Students I am Unavailable today. ﴾͡๏̯͡๏﴿><br/>
+  <a href="LoginDemo.aspx">Login Now...! for your Tasks..!</a></asp:Literal></p>
+  </div>--%>
+  
+<div id="templatemo_header_wrapper">
+<a name="toppage"></a>
+    <div id="templatemo_header">
+    	<div id="site_title">
+            <h1><a href="Welcome.aspx" target="_parent">
+                <img src="images/templatemo_logo.PNG" alt="Site Title" style="width: 192px" />&nbsp;
+            </a></h1>
+        </div>
+        <p>Samples for ASP.NET.Examples for All Controls.</p>
+        <p>This web is ongoing under development.</p>
+    
+    </div> <!-- end of templatemo_header -->
+
+</div> <!-- end of templatemo_menu_wrapper -->
+
+<div id="templatemo_menu_wrapper">
+    <div id="templatemo_menu">
+        
+        <ul>
+            <li><a href="LoginDemo.aspx" target="_parent" runat="server" id="linklogin" class="current"><asp:Label ID="lbllinklogin" runat="server" Text="Login"></asp:Label></a></li>
+            <li><a href="RegistrationDemo.aspx"  target="_parent" runat="server" id="linkregister"><asp:Label ID="lbllinkregister" runat="server" Text="Registration"></asp:Label> </a></li>
+            <li><a href="ListofFiles.aspx">Examples</a></li>
+            <li><a href="TemplateDownload.aspx#imagesdown">Downloads</a></li>
+             <li><a href="Submission.aspx" target="_parent">Submission</a></li>
+            <li><a href="zContact.aspx" target="_parent">Contact</a></li>
+           
+        </ul>    	
+    
+    </div> <!-- end of templatemo_menu -->
+    
+</div>
+
+<div id="templatemo_content_wrapper">
+
+	<div id="templatemo_sidebar">
+    
+    	<div id="myleftdiv" runat="server" class="sidebar_box">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <h2>
+                    Recent Files</h2>
+                <%--<p>
+                    You can Add Quick Links or Menu Control Here ...</p>
+                <div class="news_box">
+                    <a href="#">No Status</a>
+                    <p class="post_info">
+                        Posted by <a href="#">Admin</a> on <span>Today</span></p>
+                </div>--%>
+                <div class="news_box">
+                    <a >Last Updated Files.</a>
+                    <p class="post_info">
+                        <asp:Label ID="lblrecentfiles" runat="server" Text=""></asp:Label>
+                    </p>
+                    <p class="post_info">
+                        Posted by <a href="zContact.aspx">Admin</a> on <span>Today</span></p>
+                    <p class="post_info">
+                        &nbsp;</p>
+                    <asp:Calendar ID="Calendar1" runat="server" BackColor="White" 
+                        BorderColor="#999999" DayNameFormat="Shortest" 
+                        Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" 
+                    Width="200px" CellPadding="4">
+                        <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                        <SelectorStyle BackColor="#CCCCCC" />
+                        <WeekendDayStyle BackColor="#FFFFCC" />
+                        <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                        <OtherMonthDayStyle ForeColor="#808080" />
+                        <NextPrevStyle VerticalAlign="Bottom" />
+                        <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                        <TitleStyle BackColor="#999999" Font-Bold="True" BorderColor="Black" />
+                    </asp:Calendar>
+                    <div id="mycustomnavigation" runat="server">
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server" 
+                    PathSeparator=" &gt;&gt;&gt;&gt;&gt;">
+                            <NodeStyle BackColor="#FFCCCC" />
+                        </asp:SiteMapPath>
+                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+                    Orientation="Horizontal">
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                    ShowCheckBoxes="Root" Target="_Self" ShowLines="True" ExpandDepth="0">
+                            <HoverNodeStyle Font-Size="20pt" />
+                        </asp:TreeView>
+                        <asp:TreeView ID="treeview4tybca3" runat="server" 
+                            DataSourceID="SiteMapDataSource2" ShowLines="True" ExpandDepth="4">
+                            <HoverNodeStyle Font-Bold="True" Font-Overline="True" />
+                            <Nodes>
+                                <asp:TreeNode ImageUrl="~/image/006.jpg" Text="New Node" Value="New Node">
+                                    <asp:TreeNode Text="New Node" Value="New Node">
+                                        <asp:TreeNode Text="New Node" Value="New Node">
+                                            <asp:TreeNode Text="New Node" Value="New Node">
+                                                <asp:TreeNode Text="New Node" Value="New Node">
+                                                    <asp:TreeNode Text="New Node" Value="New Node">
+                                                        <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                                                    </asp:TreeNode>
+                                                </asp:TreeNode>
+                                            </asp:TreeNode>
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                                    <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+                                    <asp:TreeNode ImageUrl="~/image/003.jpg" Text="New Node" Value="New Node">
+                                    </asp:TreeNode>
+                                </asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" />
+                    </div>
+                </div>
+                <h3>
+                    SAMPLE MENU</h3>
+                <asp:Menu ID="Menu2" runat="server" MaximumDynamicDisplayLevels="20" 
+                    Orientation="Vertical">
+                    <Items>
+                        <asp:MenuItem Text="New Item" Value="New Item">
+                        
+                                                <asp:MenuItem Text="New Item" Value="New Item">
+                                                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                            </asp:MenuItem>
+                        
+                            
+                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                        
+                    </Items>
+                </asp:Menu>
+        
+            </asp:ContentPlaceHolder>
+        	
+            
+        </div><div id="myleftdivbottom" runat="server" class="sidebar_box_bottom"></div>
+       <!-- <div class="sidebar_box">
+			
+            <h2>Newsletter</h2>
+            
+            <form action="#" method="get">
+            <label>Please enter your email address to subscribe our newsletter.</label>
+            <input type="text" value="" name="username" size="10" id="input_field" title="usernmae" />
+            <input type="submit" name="login" value="Subscribe" alt="login" id="submit_btn" title="Login" />
+            </form>
+            
+            <div class="cleaner"></div>
+        
+        </div>
+        <div class="sidebar_box_bottom">
+        </div>
+    -->
+    </div> <!-- end of sidebar -->
+    
+    <div id="templatemo_content">
+    
+    	 <div class="content_box">
+      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        
+            <h3>
+                Welcome to my Website. This website contains Examples for ASP.Net. You can 
+                find all the Demos for different controls and functionality of ASP.Net&nbsp;&nbsp;&nbsp;
+            </h3>
+            <p>
+                <a href="#/page/1" target="_parent">Free CSS Templates</a> are provided by
+                <a href="#" target="_parent">ASP.NET SAMPLES</a> for everyone. Feel free to download, edit used in this template. Nam ut libero at lacus feugiat tincidunt vitae sed ipsum.<asp:Button 
+                    ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="Button2" runat="server" Text="Button" />
+            </p>
+            <div class="cleaner_h20">
+            </div>
+            <div class="image_fl">
+                <img src="images/templatemo_images01.jpg" alt="image" />
+            </div>
+            <div class="section_w250 float_r">
+                <ul class="list_01">
+                    <li>For info </li>
+                    <li>For more Info</li>
+                </ul>
+            </div>
+        
+        </asp:ContentPlaceHolder>
+        </div>
+      <div class="content_box_bottom"></div>
+        
+       <div id="mydiv" runat="server" class="content_box">
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+           <asp:Label ID="lblPath" runat="server" ForeColor="Fuchsia"></asp:Label>
+           <asp:Label ID="lblPath0" runat="server" ForeColor="Fuchsia"></asp:Label>
+           <h2>Source Information:</h2>
+           <textarea id="TextArea1"><asp:Literal ID="ltlsource" runat="server"></asp:Literal>
+           </textarea>
+        	<div class="cleaner"></div>
+        	<h2>Code Information:</h2>
+           <textarea id="TextArea2"><asp:Literal ID="ltlcode" runat="server"></asp:Literal>
+           </textarea>
+        
+           </asp:ContentPlaceHolder>
+        </div>
+        <div id="mydiv1" runat="server" class="content_box_bottom"></div>
+    </div> <!-- end of content -->
+    
+    <div class="cleaner"></div>
+
+</div>
+
+<div id="templatemo_footer_wrapper">
+
+    <div id="templatemo_footer">
+    
+        <ul class="footer_menu">
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="RegistrationDemo.aspx" target="_parent">Registration</a></li>
+                    <li><a href="ListofFiles.aspx" target="_parent">Examples</a></li>
+                    <li><a href="TemplateDownload.aspx#imagesdown" target="_parent">Downloads</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="last_menu"><a href="zContact.aspx">Contact</a></li>
+                    <li class="last_menu"><a href="#">
+                        <asp:DropDownList ID="DropDownList1" runat="server" Visible="False">
+                            <asp:ListItem>Winter</asp:ListItem>
+                            <asp:ListItem>Summer</asp:ListItem>
+                            <asp:ListItem>Spring</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:Button ID="Button3" runat="server" CssClass="mybg" Text="Feel It" 
+                            Visible="False" />
+                    </a></li>
+                </ul>
+                
+                &nbsp;
+                
+               Copyright <%=”&copy;” & DateTime.Now.Year %> <a href="Moderator/Browser.aspx">Hi-Tech</a> | 
+                Website Templates by <a href="Moderator/Browser.aspx" target="_parent">Hi-Tech</a>
+        
+        <br />
+        <uc1:myfooter ID="myfooter1" runat="server" />
+    </div>
+    
+</div>
+
+    </form>
+</body>
+
+</html>
