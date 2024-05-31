@@ -17,8 +17,18 @@
 ![Home Page](screenshots/home_page.png)
 *Home Page*
 
+![Login Page](screenshots/login_page.png)
+*Login Page*
+
 ![Tutorial Page](screenshots/tutorial_page.png)
 *Tutorial Page*
+
+![Submission Page](screenshots/submission_page.png)
+*Submission Page*
+
+![Download Page](screenshots/download_page.png)
+*Download Page*
+
 
 ## Technologies Used
 
