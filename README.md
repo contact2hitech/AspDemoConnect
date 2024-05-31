@@ -1,4 +1,3 @@
-
 # AspDemoConnect
 
 **AspDemoConnect** is a comprehensive web application developed in ASP.NET C# for educational institutions. It allows students to register, log in, view tutorials and live demos, upload their own demos, and submit assignments for different subjects. The site also silently tracks attendance using session data, providing a seamless learning and tracking experience.
@@ -32,7 +31,7 @@
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/AspDemoConnect.git
+    git clone https://github.com/contact2hitech/AspDemoConnect.git
     ```
 2. Open the solution in Visual Studio.
 3. Configure the SQL Server connection string in `appsettings.json`.
